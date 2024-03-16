@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #cookie {
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            cursor: pointer;
+        }
+        #score {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cookie Clicker</h1>
+    <p>Click the cookie to get points!</p>
+    <p id="score">Score: 0</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/218/218193.png" alt="Cookie" id="cookie">
+    <script>
+        let score = 0;
+        
+        const cookie = document.getElementById('cookie');
+        const scoreDisplay = document.getElementById('score');
+        
+        cookie.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = 'Score: ' + score;
+        });
+    </script>
+</body>
+</html>
